@@ -1,0 +1,28 @@
+{
+  "name": "Meet MIDI Mute",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Connects a MIDI pedal to the Google Meet mute button.",
+  "homepage_url": "https://github.com/psobot/meet-midi-mute",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "https://meet.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*"
+      ],
+      "js": [
+        "src/inject/index.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "sounds/*.wav"
+  ]
+}
